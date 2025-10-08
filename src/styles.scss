@@ -1,0 +1,119 @@
+/* Global Styles - GeoPoint Solutions */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700;800&display=swap');
+
+// Color Palette
+$primary-dark-blue: #0d2c4b;
+$accent-gold: #d4af37;
+$text-dark-gray: #333333;
+$background-light: #f4f4f4;
+$white: #ffffff;
+
+// Typography
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans Georgian', sans-serif;
+  color: $text-dark-gray;
+  background-color: $background-light;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: $primary-dark-blue;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+// Utilities
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+
+  &.btn-primary {
+    background-color: $accent-gold;
+    color: $white;
+
+    &:hover {
+      background-color: #b89a2a;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba($accent-gold, 0.3);
+    }
+  }
+
+  &.btn-outline {
+    background-color: transparent;
+    border: 2px solid $accent-gold;
+    color: $accent-gold;
+
+    &:hover {
+      background-color: $accent-gold;
+      color: $white;
+    }
+  }
+}
+
+.section {
+  padding: 4rem 0;
+
+  &-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background-color: $accent-gold;
+      margin: 1rem auto 0;
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+
+  .section {
+    padding: 3rem 0;
+  }
+}

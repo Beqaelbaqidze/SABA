@@ -1,0 +1,22 @@
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <a routerLink="/">GeoPoint Solutions</a>
+      </div>
+
+      <button class="menu-toggle" (click)="toggleMenu()" [class.open]="menuOpen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" [class.open]="menuOpen">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">მთავარი</a>
+        <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">ჩვენ შესახებ</a>
+        <a routerLink="/services" routerLinkActive="active" (click)="closeMenu()">სერვისები</a>
+        <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">კონტაქტი</a>
+      </nav>
+    </div>
+  </div>
+</header>

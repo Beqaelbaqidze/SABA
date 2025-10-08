@@ -1,0 +1,159 @@
+.about-page {
+  .page-header {
+    background: linear-gradient(135deg, #0d2c4b 0%, #1a4d7d 100%);
+    color: white;
+    padding: 4rem 0 3rem;
+    text-align: center;
+
+    h1 {
+      color: white;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+  }
+
+  .about-content {
+    margin-bottom: 4rem;
+  }
+
+  .about-section {
+    margin-bottom: 3rem;
+
+    h2 {
+      color: #0d2c4b;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.8;
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .value-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      background: white;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .value-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      color: #0d2c4b;
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+    }
+
+    p {
+      color: #666;
+      font-size: 0.95rem;
+      margin: 0;
+    }
+  }
+
+  .team-section {
+    margin-top: 4rem;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+
+  .team-member {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+    }
+
+    .member-photo {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 1.5rem;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #d4af37;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    h3 {
+      color: #0d2c4b;
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    .member-title {
+      color: #d4af37;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+    }
+
+    .member-desc {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .page-header {
+      padding: 3rem 0 2rem;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .values-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
